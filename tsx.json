@@ -1,0 +1,159 @@
+{
+  "React TS Arrow Functional Component With Export": {
+    "prefix": "tsrafce",
+    "body": [
+      "import type { JSX } from \"react/jsx-runtime\";",
+      "",
+      "const ${1:ComponentName} = (): JSX.Element => {",
+      "  return (",
+      "    <div>",
+      "      ${1:ComponentName}",
+      "    </div>",
+      "  );",
+      "};",
+      "",
+      "export default ${1:ComponentName};"
+    ],
+    "description": "Creates a React TS functional component"
+  },
+  "React TS Arrow Functional Component With Export and Props": {
+    "prefix": "tsrafcep",
+    "body": [
+      "import type { JSX } from \"react/jsx-runtime\";",
+      "",
+      "const ${1:ComponentName} = ({${3:prop1}}:{${2:prop1Type}}): JSX.Element => {",
+      "  return (",
+      "    <div>",
+      "      ${1:ComponentName}",
+      "    </div>",
+      "  );",
+      "};",
+      "",
+      "export default ${1:ComponentName};"
+    ],
+    "description": "Creates a React TS functional component"
+  },
+
+  "React useState Hook with Type": {
+    "prefix": "tsus",
+    "body": [
+      "const [${1:state}, set${2:State}] = useState<${3:type}>(${4:initialValue});"
+    ],
+    "description": "Creates a typed useState hook"
+  },
+
+  "React useEffect Hook": {
+    "prefix": "tsef",
+    "body": [
+      "useEffect(() => {",
+      "  ${1:// effect logic}",
+      "  return () => {",
+      "    ${2:// cleanup}",
+      "  };",
+      "}, [${3:dependencies}]);"
+    ],
+    "description": "Creates a useEffect hook"
+  },
+
+  "Next.js Typed Page Component": {
+    "prefix": "tsnextpage",
+    "body": [
+      "import type { NextPage } from 'next';",
+      "",
+      "const ${1:PageName}: NextPage = () => {",
+      "  return (",
+      "    <div>",
+      "      ${1:PageName} page",
+      "    </div>",
+      "  );",
+      "};",
+      "",
+      "export default ${1:PageName};"
+    ],
+    "description": "Creates a Next.js typed page component"
+  },
+
+  "Next.js Head Tag": {
+    "prefix": "tsxhead",
+    "body": [
+      "import Head from 'next/head';",
+      "",
+      "<Head>",
+      "  <title>${1:Page Title}</title>",
+      "  <meta name=\"description\" content=\"${2:Page description}\" />",
+      "  <link rel=\"icon\" href=\"/favicon.ico\" />",
+      "</Head>"
+    ],
+    "description": "Inserts a Next.js <Head> component"
+  },
+
+  "Next.js API Route Handler": {
+    "prefix": "tsapi",
+    "body": [
+      "import type { NextApiRequest, NextApiResponse } from 'next';",
+      "",
+      "export default function handler(req: NextApiRequest, res: NextApiResponse) {",
+      "  if (req.method === '${1:GET}') {",
+      "    // Handle GET request",
+      "    res.status(200).json({ message: 'Hello from API!' });",
+      "  } else {",
+      "    res.status(405).end();",
+      "  }",
+      "}"
+    ],
+    "description": "Creates a typed Next.js API route"
+  },
+
+  "Next.js getServerSideProps": {
+    "prefix": "tsgssp",
+    "body": [
+      "import type { GetServerSideProps } from 'next';",
+      "",
+      "export const getServerSideProps: GetServerSideProps = async (context) => {",
+      "  return {",
+      "    props: {}, // will be passed to the page component as props",
+      "  };",
+      "};"
+    ],
+    "description": "Creates getServerSideProps function"
+  },
+
+  "Next.js getStaticProps": {
+    "prefix": "tsgsp",
+    "body": [
+      "import type { GetStaticProps } from 'next';",
+      "",
+      "export const getStaticProps: GetStaticProps = async (context) => {",
+      "  return {",
+      "    props: {}, // will be passed to the page component as props",
+      "  };",
+      "};"
+    ],
+    "description": "Creates getStaticProps function"
+  },
+
+  "Next.js getStaticPaths": {
+    "prefix": "tsgspaths",
+    "body": [
+      "import type { GetStaticPaths } from 'next';",
+      "",
+      "export const getStaticPaths: GetStaticPaths = async () => {",
+      "  return {",
+      "    paths: [],",
+      "    fallback: false",
+      "  };",
+      "};"
+    ],
+    "description": "Creates getStaticPaths function"
+  },
+
+  "React useRouter Hook": {
+    "prefix": "tsrouter",
+    "body": [
+      "import { useRouter } from 'next/router';",
+      "",
+      "const router = useRouter();"
+    ],
+    "description": "Import and initialize Next.js useRouter"
+  }
+}
